@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八福 - 品質と信頼で、食の未来を創造する</title>
+    <meta name="description" content="八福は最高級の和牛を確かな目利きでお届けする食品専門商社です。神戸牛をはじめとする厳選された商品を取り扱っています。">
+    
+    <!-- 外部CSS読み込み -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav class="container">
+            <div class="logo">八福</div>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="#about" data-ja="会社概要" data-en="About" data-zh="公司概要">会社概要</a></li>
+                    <li><a href="#business" data-ja="事業内容" data-en="Business" data-zh="业务内容">事業内容</a></li>
+                    <li><a href="#products" data-ja="取扱商品" data-en="Products" data-zh="产品">取扱商品</a></li>
+                    <li><a href="#partners" data-ja="仕入先・パートナー" data-en="Partners" data-zh="合作伙伴">仕入先・パートナー</a></li>
+                    <li><a href="#news" data-ja="お知らせ" data-en="News" data-zh="新闻">お知らせ</a></li>
+                    <li><a href="transaction.html" data-ja="お取引の流れ" data-en="Transaction Flow" data-zh="交易流程">お取引の流れ</a></li>
+                    <li><a href="#contact" class="contact-btn" data-ja="お問い合わせ" data-en="Contact" data-zh="联系我们">お問い合わせ</a></li>
+                </ul>
+                <div class="language-selector">
+                    <select id="languageSelect" onchange="changeLanguage()">
+                        <option value="ja">日本語</option>
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#about" data-ja="会社概要" data-en="About" data-zh="公司概要">会社概要</a></li>
+                <li><a href="#business" data-ja="事業内容" data-en="Business" data-zh="业务内容">事業内容</a></li>
+                <li><a href="#products" data-ja="取扱商品" data-en="Products" data-zh="产品">取扱商品</a></li>
+                <li><a href="#partners" data-ja="仕入先・パートナー" data-en="Partners" data-zh="合作伙伴">仕入先・パートナー</a></li>
+                <li><a href="#news" data-ja="お知らせ" data-en="News" data-zh="新闻">お知らせ</a></li>
+                <li><a href="transaction.html" data-ja="お取引の流れ" data-en="Transaction Flow" data-zh="交易流程">お取引の流れ</a></li>
+                <li><a href="#contact" data-ja="お問い合わせ" data-en="Contact" data-zh="联系我们">お問い合わせ</a></li>
+            </ul>
+            <div class="language-selector">
+                <select id="languageSelectMobile" onchange="changeLanguage()">
+                    <option value="ja">日本語</option>
+                    <option value="en">English</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-ja="品質と信頼で、食の未来を創造する" data-en="Creating the Future of Food with Quality and Trust" data-zh="以品质和信任创造食品的未来">品質と信頼で、食の未来を創造する</h1>
+            <p data-ja="最高級の和牛を、確かな目利きでお届けします" data-en="Delivering the finest wagyu beef with expert selection" data-zh="以专业的眼光提供最高级的和牛">最高級の和牛を、確かな目利きでお届けします</p>
+            <a href="#about" class="cta-button" data-ja="詳しく見る" data-en="Learn More" data-zh="了解更多">詳しく見る</a>
+        </div>
+    </section>
+
+    <!-- 会社紹介 -->
+    <section id="about" class="features">
+        <div class="container">
+            <h2 class="section-title fade-in" data-ja="私たちの強み" data-en="Our Strengths" data-zh="我们的优势">私たちの強み</h2>
+            <div class="feature-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"></div>
+                    <h3 data-ja="徹底した品質管理" data-en="Thorough Quality Control" data-zh="彻底的质量管理">徹底した品質管理</h3>
+                    <p data-ja="厳格な基準による商品選定と、最新の品質管理システムで、常に最高品質の商品をお届けします。" data-en="We deliver the highest quality products through strict selection criteria and the latest quality management systems." data-zh="通过严格的产品选择标准和最新的质量管理系统，始终提供最高品质的产品。">厳格な基準による商品選定と、最新の品質管理システムで、常に最高品質の商品をお届けします。</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"></div>
+                    <h3 data-ja="確かな信頼関係" data-en="Solid Trust Relationships" data-zh="坚实的信任关系">確かな信頼関係</h3>
+                    <p data-ja="長年培った生産者との強固なパートナーシップにより、安定した供給体制を実現しています。" data-en="We have established a stable supply system through strong partnerships with producers cultivated over many years." data-zh="通过与生产者多年培养的牢固合作关系，实现了稳定的供应体系。">長年培った生産者との強固なパートナーシップにより、安定した供給体制を実現しています。</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"></div>
+                    <h3 data-ja="食のプロフェッショナル" data-en="Food Professionals" data-zh="食品专业人士">食のプロフェッショナル</h3>
+                    <p data-ja="豊富な経験と知識を持つスタッフが、お客様のニーズに最適な提案をいたします。" data-en="Our experienced and knowledgeable staff provide optimal proposals to meet customer needs." data-zh="拥有丰富经验和知识的员工，为客户需求提供最佳建议。">豊富な経験と知識を持つスタッフが、お客様のニーズに最適な提案をいたします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 取扱商品 -->
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title fade-in" data-ja="取扱商品" data-en="Our Products" data-zh="经营产品">取扱商品</h2>
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%23333' width='400' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23999' style='font-size:24px'>神戸牛</text></svg>" alt="神戸牛">
+                    <div class="product-info">
+                        <h3 data-ja="神戸牛" data-en="Kobe Beef" data-zh="神户牛">神戸牛</h3>
+                        <p data-ja="株式会社ナカスジより仕入れる最高級の神戸牛。厳選された品質をお約束します。" data-en="The finest Kobe beef sourced from NAKASUJI CO., LTD. We promise carefully selected quality." data-zh="从株式会社NAKASUJI采购的最高级神户牛。我们承诺精选的品质。">株式会社ナカスジより仕入れる最高級の神戸牛。厳選された品質をお約束します。</p>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%23333' width='400' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23999' style='font-size:24px'>和牛</text></svg>" alt="高級和牛">
+                    <div class="product-info">
+                        <h3 data-ja="その他高級和牛" data-en="Premium Wagyu" data-zh="其他高级和牛">その他高級和牛</h3>
+                        <p data-ja="全国各地の優良生産者から直接仕入れる、こだわりの和牛をご提供します。" data-en="We provide carefully selected wagyu directly sourced from excellent producers nationwide." data-zh="我们提供从全国各地优秀生产者直接采购的精选和牛。">全国各地の優良生産者から直接仕入れる、こだわりの和牛をご提供します。</p>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%23333' width='400' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23999' style='font-size:24px'>厳選食材</text></svg>" alt="厳選食材">
+                    <div class="product-info">
+                        <h3 data-ja="厳選食材" data-en="Selected Ingredients" data-zh="精选食材">厳選食材</h3>
+                        <p data-ja="季節の旬を大切に、新鮮で質の高い食材を幅広く取り揃えています。" data-en="We offer a wide range of fresh, high-quality ingredients, valuing seasonal specialties." data-zh="我们重视时令，提供各种新鲜高质量的食材。">季節の旬を大切に、新鮮で質の高い食材を幅広く取り揃えています。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- パートナー -->
+    <section id="partners" class="partner-section">
+        <div class="container">
+            <h2 class="section-title fade-in" data-ja="仕入先パートナー" data-en="Supply Partners" data-zh="供应合作伙伴">仕入先パートナー</h2>
+            <div class="partner-feature fade-in">
+                <div class="partner-logo">
+                    <h3>株式会社ナカスジ</h3>
+                    <p>NAKASUJI CO., LTD.</p>
+                </div>
+                <div class="partner-info">
+                    <h3 data-ja="株式会社ナカスジ" data-en="NAKASUJI CO., LTD." data-zh="株式会社NAKASUJI">株式会社ナカスジ</h3>
+                    <p data-ja="創業120年以上の歴史を持つ、神戸牛の専門商社。厳格な品質基準と豊富な経験により、最高品質の神戸牛を安定供給していただいています。" data-en="A specialized Kobe beef trading company with over 120 years of history. They provide stable supply of the highest quality Kobe beef through strict quality standards and extensive experience." data-zh="拥有120多年历史的神户牛专业贸易公司。通过严格的质量标准和丰富的经验，稳定供应最高品质的神户牛。">創業120年以上の歴史を持つ、神戸牛の専門商社。厳格な品質基準と豊富な経験により、最高品質の神戸牛を安定供給していただいています。</p>
+                    <p data-ja="株式会社ナカスジとの強固なパートナーシップにより、八福は常に最高級の神戸牛をお客様にお届けすることが可能です。" data-en="Through our strong partnership with NAKASUJI CO., LTD., Hachifuku can consistently deliver the finest Kobe beef to our customers." data-zh="通过与株式会社NAKASUJI的牢固合作关系，八福始终能够向客户提供最高级的神户牛。">株式会社ナカスジとの強固なパートナーシップにより、八福は常に最高級の神戸牛をお客様にお届けすることが可能です。</p>
+                    <a href="https://nakasuji.net/" target="_blank" rel="noopener noreferrer" data-ja="株式会社ナカスジについて詳しく見る →" data-en="Learn more about NAKASUJI CO., LTD. →" data-zh="了解更多关于株式会社NAKASUJI →">株式会社ナカスジについて詳しく見る →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ニュース -->
+    <section id="news">
+        <div class="container">
+            <h2 class="section-title fade-in" data-ja="お知らせ" data-en="News" data-zh="新闻">お知らせ</h2>
+            <div class="news-list">
+                <div class="news-item fade-in">
+                    <span class="news-date">2025.10.01</span>
+                    <div>
+                        <h4 data-ja="秋の特選和牛フェアを開催いたします" data-en="Autumn Premium Wagyu Fair" data-zh="举办秋季特选和牛展销会">秋の特選和牛フェアを開催いたします</h4>
+                        <p data-ja="全国各地の銘柄和牛を特別価格でご提供する秋のフェアを実施いたします。" data-en="We will hold an autumn fair offering branded wagyu from across Japan at special prices." data-zh="我们将举办秋季展销会，以特价提供全国各地的品牌和牛。">全国各地の銘柄和牛を特別価格でご提供する秋のフェアを実施いたします。</p>
+                    </div>
+                </div>
+                <div class="news-item fade-in">
+                    <span class="news-date">2025.09.15</span>
+                    <div>
+                        <h4 data-ja="新規お取引先様の募集を開始しました" data-en="Now Accepting New Business Partners" data-zh="开始招募新的交易客户">新規お取引先様の募集を開始しました</h4>
+                        <p data-ja="レストラン・ホテル様向けの新規お取引を開始いたしました。詳細はお問い合わせください。" data-en="We have started accepting new business partnerships with restaurants and hotels. Please contact us for details." data-zh="我们已开始接受餐厅和酒店的新业务合作。详情请咨询。">レストラン・ホテル様向けの新規お取引を開始いたしました。詳細はお問い合わせください。</p>
+                    </div>
+                </div>
+                <div class="news-item fade-in">
+                    <span class="news-date">2025.08.01</span>
+                    <div>
+                        <h4 data-ja="ホームページをリニューアルしました" data-en="Website Renewal" data-zh="网站更新">ホームページをリニューアルしました</h4>
+                        <p data-ja="より見やすく、使いやすいサイトへとリニューアルいたしました。" data-en="We have renewed our website to be more accessible and user-friendly." data-zh="我们已将网站更新为更易于查看和使用的版本。">より見やすく、使いやすいサイトへとリニューアルいたしました。</p>
+                    </div>
+                </div>
+                <div class="news-item fade-in">
+                    <span class="news-date">2025.07.01</span>
+                    <div>
+                        <h4 data-ja="株式会社八福を設立いたしました" data-en="Hachifuku Co., Ltd. Established" data-zh="株式会社八福成立">株式会社八福を設立いたしました</h4>
+                        <p data-ja="最高級の和牛をお届けする専門商社として、新たなスタートを切りました。" data-en="We have started anew as a specialized trading company delivering the finest wagyu beef." data-zh="作为提供最高级和牛的专业贸易公司，我们开启了新的征程。">最高級の和牛をお届けする専門商社として、新たなスタートを切りました。</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" style="color: var(--accent-gold); text-decoration: underline;" data-ja="すべてのお知らせを見る →" data-en="View All News →" data-zh="查看所有新闻 →">すべてのお知らせを見る →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4 data-ja="会社情報" data-en="Company Info" data-zh="公司信息">会社情報</h4>
+                    <ul>
+                        <li data-ja="株式会社八福" data-en="Hachifuku Co., Ltd." data-zh="株式会社八福">株式会社八福</li>
+                        <li data-ja="代表取締役: 山田太郎" data-en="CEO: Taro Yamada" data-zh="代表董事: 山田太郎">代表取締役: 山田太郎</li>
+                        <li data-ja="設立: 2025年7月" data-en="Established: July 2025" data-zh="成立: 2025年7月">設立: 2025年7月</li>
+                        <li data-ja="資本金: 5,000万円" data-en="Capital: 50 million yen" data-zh="资本金: 5,000万日元">資本金: 5,000万円</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-ja="サービス" data-en="Services" data-zh="服务">サービス</h4>
+                    <ul>
+                        <li><a href="#" data-ja="取扱商品一覧" data-en="Product List" data-zh="产品列表">取扱商品一覧</a></li>
+                        <li><a href="#" data-ja="品質管理について" data-en="Quality Control" data-zh="质量管理">品質管理について</a></li>
+                        <li><a href="#" data-ja="物流・配送" data-en="Logistics & Delivery" data-zh="物流与配送">物流・配送</a></li>
+                        <li><a href="#" data-ja="よくあるご質問" data-en="FAQ" data-zh="常见问题">よくあるご質問</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-ja="関連リンク" data-en="Related Links" data-zh="相关链接">関連リンク</h4>
+                    <ul>
+                        <li><a href="https://nakasuji.net/" target="_blank">株式会社ナカスジ</a></li>
+                        <li><a href="#" data-ja="関連企業一覧" data-en="Related Companies" data-zh="相关企业">関連企業一覧</a></li>
+                        <li><a href="#" data-ja="業界団体" data-en="Industry Associations" data-zh="行业协会">業界団体</a></li>
+                        <li><a href="#" data-ja="採用情報" data-en="Careers" data-zh="招聘信息">採用情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-ja="お問い合わせ" data-en="Contact" data-zh="联系方式">お問い合わせ</h4>
+                    <ul>
+                        <li>〒100-0001</li>
+                        <li data-ja="東京都千代田区千代田1-1-1" data-en="1-1-1 Chiyoda, Chiyoda-ku, Tokyo" data-zh="东京都千代田区千代田1-1-1">東京都千代田区千代田1-1-1</li>
+                        <li>TEL: 03-1234-5678</li>
+                        <li>Email: info@hachifuku.co.jp</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hachifuku Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 外部JavaScript読み込み -->
+    <script src="main.js"></script>
+</body>
+</html>
