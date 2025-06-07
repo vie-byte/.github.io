@@ -2,6 +2,12 @@
    八福 - メインJavaScript
    ================================ */
 
+// フォント読み込みチェック
+document.fonts.ready.then(() => {
+    console.log('Fonts loaded');
+    document.body.classList.add('fonts-loaded');
+});
+
 // 言語切り替え機能
 function changeLanguage() {
     const lang = document.getElementById('languageSelect').value;

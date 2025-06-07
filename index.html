@@ -13,6 +13,58 @@
     
     <!-- 外部CSS読み込み -->
     <link rel="stylesheet" href="main.css">
+    
+    <!-- GitHub Pages対応追加スタイル -->
+    <style>
+        /* フォント読み込みのフォールバック */
+        body {
+            font-family: 'Noto Serif JP', '游明朝', 'Yu Mincho', 'Georgia', serif !important;
+        }
+        
+        /* レイアウトの基本設定 */
+        .feature-grid,
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* モバイル用改行制御 */
+        .mobile-br {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-br {
+                display: inline;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem !important;
+                line-height: 1.5 !important;
+                text-align: center;
+                padding: 0 20px;
+            }
+        }
+        
+        /* フォントの読み込み状態を表示 */
+        body::before {
+            content: 'Loading fonts...';
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            z-index: 10000;
+            display: none;
+        }
+        
+        body.fonts-loading::before {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -66,7 +118,7 @@
     <!-- ヒーローセクション -->
     <section class="hero">
         <div class="hero-content">
-            <h1 data-ja="品質と信頼で、食の未来を創造する" data-en="Creating the Future of Food with Quality and Trust" data-zh="以品质和信任创造食品的未来">品質と信頼で、食の未来を創造する</h1>
+            <h1 data-ja="品質と信頼で、<br class='mobile-br'>食の未来を創造する" data-en="Creating the Future of Food<br class='mobile-br'>with Quality and Trust" data-zh="以品质和信任<br class='mobile-br'>创造食品的未来">品質と信頼で、<br class="mobile-br">食の未来を創造する</h1>
             <p data-ja="最高級の和牛を、確かな目利きでお届けします" data-en="Delivering the finest wagyu beef with expert selection" data-zh="以专业的眼光提供最高级的和牛">最高級の和牛を、確かな目利きでお届けします</p>
             <a href="#about" class="cta-button" data-ja="詳しく見る" data-en="Learn More" data-zh="了解更多">詳しく見る</a>
         </div>
@@ -78,19 +130,16 @@
             <h2 class="section-title fade-in" data-ja="私たちの強み" data-en="Our Strengths" data-zh="我们的优势">私たちの強み</h2>
             <div class="feature-grid">
                 <div class="feature-card fade-in">
-                    <div class="feature-icon"></div>
-                    <h3 data-ja="徹底した品質管理" data-en="Thorough Quality Control" data-zh="彻底的质量管理">徹底した品質管理</h3>
-                    <p data-ja="厳格な基準による商品選定と、最新の品質管理システムで、常に最高品質の商品をお届けします。" data-en="We deliver the highest quality products through strict selection criteria and the latest quality management systems." data-zh="通过严格的产品选择标准和最新的质量管理系统，始终提供最高品质的产品。">厳格な基準による商品選定と、最新の品質管理システムで、常に最高品質の商品をお届けします。</p>
+                    <h3 data-ja="心を込めた目利き" data-en="Expert Selection with Heart" data-zh="用心的专业鉴选">心を込めた目利き</h3>
+                    <p data-ja="一頭一頭、一品一品。熟練の目利きが選び抜いた本物の美味しさを、自信を持ってお届けします。" data-en="Each selection made with expertise and care. We deliver authentic flavors chosen by our seasoned professionals with confidence." data-zh="每一头、每一件。由熟练的专家精心挑选的正宗美味，我们满怀信心地为您呈现。">一頭一頭、一品一品。熟練の目利きが選び抜いた本物の美味しさを、自信を持ってお届けします。</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon"></div>
-                    <h3 data-ja="確かな信頼関係" data-en="Solid Trust Relationships" data-zh="坚实的信任关系">確かな信頼関係</h3>
-                    <p data-ja="長年培った生産者との強固なパートナーシップにより、安定した供給体制を実現しています。" data-en="We have established a stable supply system through strong partnerships with producers cultivated over many years." data-zh="通过与生产者多年培养的牢固合作关系，实现了稳定的供应体系。">長年培った生産者との強固なパートナーシップにより、安定した供給体制を実現しています。</p>
+                    <h3 data-ja="生産者との絆" data-en="Bonds with Producers" data-zh="与生产者的纽带">生産者との絆</h3>
+                    <p data-ja="産地との深い信頼関係を築いています。生産者の誇りと情熱を、そのまま食卓へとつなぐ架け橋として。" data-en="We build deep relationships of trust with production areas. Serving as a bridge that connects producers' pride and passion directly to your table." data-zh="我们与产地建立深厚的信任关系。作为将生产者的骄傲和热情直接传递到餐桌的桥梁。">産地との深い信頼関係を築いています。生産者の誇りと情熱を、そのまま食卓へとつなぐ架け橋として。</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon"></div>
-                    <h3 data-ja="食のプロフェッショナル" data-en="Food Professionals" data-zh="食品专业人士">食のプロフェッショナル</h3>
-                    <p data-ja="豊富な経験と知識を持つスタッフが、お客様のニーズに最適な提案をいたします。" data-en="Our experienced and knowledgeable staff provide optimal proposals to meet customer needs." data-zh="拥有丰富经验和知识的员工，为客户需求提供最佳建议。">豊富な経験と知識を持つスタッフが、お客様のニーズに最適な提案をいたします。</p>
+                    <h3 data-ja="おもてなしの心" data-en="Spirit of Hospitality" data-zh="款待之心">おもてなしの心</h3>
+                    <p data-ja="和牛の素晴らしさを、もっと多くの方へ。細部にまで心を配り、期待を超える価値をお届けいたします。" data-en="Sharing the excellence of wagyu with more people. We pay attention to every detail to deliver value that exceeds expectations." data-zh="将和牛的美妙传递给更多人。我们注重每一个细节，提供超越期待的价值。">和牛の素晴らしさを、もっと多くの方へ。細部にまで心を配り、期待を超える価値をお届けいたします。</p>
                 </div>
             </div>
         </div>
