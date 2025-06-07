@@ -301,6 +301,7 @@ nav {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%23111" width="1920" height="1080"/><rect fill="%23222" x="0" y="400" width="1920" height="280"/></svg>');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: var(--primary-white);
     text-align: center;
 }
@@ -799,6 +800,11 @@ footer {
         min-height: 100vh;
         height: auto;
         padding: 2rem 0;
+        /* モバイル用の縦長背景 */
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" preserveAspectRatio="xMidYMid slice"><rect fill="%23111" width="375" height="812"/><rect fill="%23222" x="0" y="300" width="375" height="212"/></svg>');
+        background-size: cover;
+        background-position: center;
     }
     
     .hero-content {
