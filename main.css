@@ -802,7 +802,7 @@ footer {
         padding: 2rem 0;
         /* モバイル用の縦長背景 */
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" preserveAspectRatio="xMidYMid slice"><rect fill="%23111" width="375" height="812"/><rect fill="%23222" x="0" y="300" width="375" height="212"/></svg>');
+                    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 1218" preserveAspectRatio="xMidYMid slice"><rect fill="%23111" width="375" height="1218"/><rect fill="%23222" x="0" y="450" width="375" height="318"/></svg>');
         background-size: cover;
         background-position: center;
     }
