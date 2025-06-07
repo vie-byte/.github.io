@@ -34,7 +34,7 @@ function changeLanguage() {
         const text = element.getAttribute(`data-${lang}`);
         if (text) {
             // HTMLタグを含む場合はinnerHTMLを使用
-            if (text.includes('<br>') || text.includes('<strong>')) {
+            if (text.includes('<') || text.includes('>')) {
                 element.innerHTML = text;
             } else {
                 element.textContent = text;
