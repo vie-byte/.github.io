@@ -22,11 +22,29 @@
 
 /* 基本設定 */
 body {
-    font-family: 'Noto Sans JP', 'メイリオ', sans-serif;
+    font-family: 'Noto Serif JP', 'Shippori Mincho', '游明朝', 'Yu Mincho', 'ヒラギノ明朝 Pro', serif;
     color: var(--primary-white);
     background-color: var(--primary-black);
     line-height: 1.8;
     overflow-x: hidden;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-feature-settings: "palt" 1;
+    
+    /* Windows向けアンチエイリアス設定 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-optical-sizing: auto;
+    
+    /* Windows Chrome対策 */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    
+    /* フォントの太さを少し上げて視認性向上 */
+    -webkit-text-stroke: 0.04em rgba(255, 255, 255, 0);
 }
 
 a {
@@ -73,9 +91,11 @@ nav {
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
+    font-family: 'Sawarabi Mincho', 'Noto Serif JP', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
 }
 
 .nav-menu {
@@ -87,6 +107,9 @@ nav {
 .nav-menu a {
     position: relative;
     padding: 0.5rem 0;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-size: 0.95rem;
 }
 
 .nav-menu a::after {
@@ -107,10 +130,12 @@ nav {
 .contact-btn {
     background-color: var(--accent-gold);
     color: var(--primary-black);
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 2.5rem;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 500;
+    letter-spacing: 0.05em;
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .contact-btn:hover {
@@ -207,6 +232,21 @@ nav {
     font-size: 1.2rem;
 }
 
+.mobile-menu li:last-child {
+    margin-top: 2rem;
+}
+
+.mobile-menu li:last-child a {
+    display: inline-block;
+    background-color: var(--accent-gold);
+    color: var(--primary-black);
+    padding: 0.8rem 2.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
 .mobile-menu a {
     color: var(--primary-white);
 }
@@ -230,9 +270,12 @@ nav {
 }
 
 .hero-content h1 {
+    font-family: 'Noto Serif JP', serif;
     font-size: 3rem;
+    font-weight: 300;
     margin-bottom: 1rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
     animation: fadeInUp 1s ease;
 }
 
@@ -283,12 +326,14 @@ nav {
     display: inline-block;
     background-color: var(--accent-gold);
     color: var(--primary-black);
-    padding: 1rem 3rem;
+    padding: 1.2rem 4rem;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 500;
+    letter-spacing: 0.1em;
     transition: var(--transition);
     animation: fadeInUp 1s ease 0.6s;
     animation-fill-mode: both;
+    white-space: nowrap;
 }
 
 .cta-button:hover {
@@ -302,11 +347,14 @@ section {
 }
 
 .section-title {
+    font-family: 'Noto Serif JP', serif;
     text-align: center;
     font-size: 2.5rem;
+    font-weight: 400;
     margin-bottom: 3rem;
     position: relative;
     padding-bottom: 1rem;
+    letter-spacing: 0.08em;
 }
 
 .section-title::after {
@@ -468,10 +516,145 @@ footer {
     margin-right: 0.5rem;
 }
 
+/* お取引の流れセクション */
+.transaction-section {
+    background-color: var(--deep-black);
+    position: relative;
+}
+
+/* ステップ表示 */
+.transaction-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+}
+
+.step-item {
+    flex: 0 1 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.step-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+    border-color: var(--accent-gold);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-gold);
+    color: var(--primary-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 0 auto 1rem;
+}
+
+.step-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-white);
+}
+
+.step-item p {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+}
+
+.step-arrow {
+    font-size: 2rem;
+    color: var(--accent-gold);
+    flex: 0 0 auto;
+}
+
+/* お取引情報 */
+.transaction-info {
+    margin-top: 3rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+}
+
+.info-card h3 {
+    color: var(--accent-gold);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.info-card ul {
+    list-style: none;
+}
+
+.info-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
 /* レスポンシブ */
 @media (max-width: 768px) {
     .nav-right {
         display: none;
+    }
+    
+    /* ボタンサイズ調整 */
+    .contact-btn {
+        padding: 0.6rem 2rem;
+        font-size: 0.9rem;
+    }
+    
+    .cta-button {
+        padding: 1rem 3rem;
+        font-size: 0.95rem;
+    }
+    
+    /* お取引の流れモバイル対応 */
+    .transaction-steps {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .step-arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+    
+    .step-item {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
     }
     
     .hamburger {
@@ -508,5 +691,144 @@ footer {
 @media (min-width: 769px) {
     .mobile-menu {
         display: none !important;
+    }
+}
+
+/* 追加フォントスタイリング */
+.feature-card h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.product-info h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.partner-logo h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.partner-info h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.news-item h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.notice-box h4 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+/* プレミアム感を演出する追加設定 */
+p {
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+}
+
+/* 数字のプロポーショナル化 */
+.news-date,
+.step-number,
+th,
+td {
+    font-feature-settings: "palt" 1, "pkna" 1;
+}
+
+/* ボタンのテキスト調整 */
+button,
+.cta-button,
+.contact-btn {
+    font-family: 'Noto Serif JP', serif;
+    text-transform: uppercase;
+}
+
+/* フォーム要素 */
+select,
+input,
+textarea {
+    font-family: 'Noto Serif JP', serif;
+    letter-spacing: 0.03em;
+}
+
+/* 高品質テキストレンダリング */
+h1, h2, h3, h4, h5, h6,
+.logo,
+.section-title,
+.hero-content h1,
+.page-hero h1 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    
+    /* Windows向け追加設定 */
+    transform: translateZ(0);
+    filter: blur(0);
+    will-change: transform;
+}
+
+/* Windows Chromeでの文字表示最適化 */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 特に大きい文字の表示改善 */
+.hero-content h1,
+.page-hero h1,
+.section-title {
+    /* Windowsでの表示を改善するために調整 */
+    text-shadow: 
+        0 0 0.5px rgba(255, 255, 255, 0.5),
+        0 0 1px rgba(255, 255, 255, 0.3),
+        0 0 2px rgba(255, 255, 255, 0.1);
+    
+    /* フォントウェイトを少し上げる */
+    font-weight: 400;
+}
+
+/* ボディテキストの読みやすさ向上 */
+p, li, td {
+    text-shadow: 0 0 0.3px rgba(255, 255, 255, 0.3);
+}
+
+/* Windowsでのボタンテキスト */
+.contact-btn,
+.cta-button {
+    /* 黒背景に金色ボタンなので別処理 */
+    -webkit-font-smoothing: auto;
+    text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.2);
+}
+
+/* CSSフィルターを使ったアプローチ */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    body {
+        filter: contrast(1.01);
+    }
+}
+
+/* 黒背景に白文字のコントラスト調整 */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+    body {
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    body {
+        -webkit-font-smoothing: antialiased;
     }
 }
