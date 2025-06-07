@@ -10,12 +10,20 @@ document.fonts.ready.then(() => {
 
 // 言語切り替え機能
 function changeLanguage() {
-    const lang = document.getElementById('languageSelect').value;
-    const langMobile = document.getElementById('languageSelectMobile');
+    const desktopLang = document.getElementById('languageSelect');
+    const mobileLang = document.getElementById('languageSelectMobile');
     
-    // モバイル用言語選択も同期
-    if (langMobile) {
-        langMobile.value = lang;
+    // アクティブなセレクトボックスから言語を取得
+    let lang;
+    if (desktopLang && desktopLang === document.activeElement) {
+        lang = desktopLang.value;
+        if (mobileLang) mobileLang.value = lang;
+    } else if (mobileLang && mobileLang === document.activeElement) {
+        lang = mobileLang.value;
+        if (desktopLang) desktopLang.value = lang;
+    } else {
+        // フォールバック
+        lang = desktopLang ? desktopLang.value : (mobileLang ? mobileLang.value : 'ja');
     }
     
     // data属性を持つすべての要素を取得

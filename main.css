@@ -195,6 +195,35 @@ nav {
     pointer-events: none;
 }
 
+/* モバイル用言語セレクター */
+.mobile-language-selector {
+    display: none;
+    position: relative;
+}
+
+.mobile-language-selector select {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--primary-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.4rem 1.5rem 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    appearance: none;
+    transition: var(--transition);
+}
+
+.mobile-language-selector::after {
+    content: '▼';
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.6rem;
+    color: var(--primary-white);
+    pointer-events: none;
+}
+
 /* ハンバーガーメニュー */
 .hamburger {
     display: none;
@@ -231,7 +260,7 @@ nav {
 
 .mobile-menu ul {
     list-style: none;
-    padding: 5rem 2rem;
+    padding: 5rem 2rem 2rem;
 }
 
 .mobile-menu li {
@@ -742,8 +771,27 @@ footer {
 
 /* レスポンシブ */
 @media (max-width: 768px) {
+    /* ナビゲーションの調整 */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     .nav-right {
         display: none;
+    }
+    
+    /* モバイル用言語セレクター表示 */
+    .mobile-language-selector {
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+    
+    /* ハンバーガーメニュー */
+    .hamburger {
+        display: flex;
     }
     
     /* ヒーローセクションのモバイル対応 */
@@ -816,10 +864,6 @@ footer {
     .feature-card p {
         font-size: 0.95rem;
         line-height: 1.9;
-    }
-    
-    .hamburger {
-        display: flex;
     }
     
     .hero-content h1,
