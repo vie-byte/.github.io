@@ -794,11 +794,23 @@ footer {
         display: flex;
     }
     
+    /* ヒーローセクションの高さ調整 */
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 2rem 0;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
     /* ヒーローセクションのモバイル対応 */
     .hero-content h1 {
         font-size: 1.8rem;
         line-height: 1.4;
         letter-spacing: 0.05em;
+        margin-bottom: 1.5rem;
     }
     
     /* モバイル用の改行制御 */
@@ -813,6 +825,7 @@ footer {
     .hero-content p {
         font-size: 0.95rem;
         padding: 0 1rem;
+        margin-bottom: 2rem;
     }
     
     /* ボタンサイズ調整 */
